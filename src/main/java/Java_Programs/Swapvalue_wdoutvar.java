@@ -8,16 +8,16 @@ public class Swapvalue_wdoutvar {
 		// TODO Auto-generated method stub
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter the value for a::");
-		int a=sc.next().charAt(0);
+		int a=sc.nextInt();
 		System.out.println("Enter the value for b::");
-		int b=sc.next().charAt(0);
+		int b=sc.nextInt();
 		
 		//int a=5;
 		//int b=10;
 		
 		a=a+b;
 		b=a-b;
-		//a=a-b;
+		a=a-b;
 		System.out.println("The value of a::"+a +"\n" +"The value of b::"+b);
 
 	}

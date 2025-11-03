@@ -8,14 +8,16 @@ public class LowerCapital {
         //char[] words = str.toCharArray();
         for (int i = 0; i < str.length(); i++) {
             if (Character.isUpperCase(str.charAt(i))) {
-                System.out.println("Capital Characters:::"+str.charAt(i) + ", ");
+                cap.append(str.charAt(i));
+                //System.out.println("Capital Characters:::"+str.charAt(i) + ", ");
+            }
+            else if (Character.isLowerCase(str.charAt(i))) {
+                lower.append(str.charAt(i));
+                //System.out.println("Lower Characters:::"+str.charAt(i) + ", ");
             }
         }
-        for (int i = 0; i < str.length(); i++) {
-            if (Character.isLowerCase(str.charAt(i))) {
-                System.out.println("Lower Characters:::"+str.charAt(i) + ", ");
-            }
-        }
+        System.out.println("Upper Case characters::"+cap);
+        System.out.println("Lower Case characters::"+lower);
     }
 }
 

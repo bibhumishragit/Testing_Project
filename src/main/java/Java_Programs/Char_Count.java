@@ -5,11 +5,10 @@ import java.util.Scanner;
 public class Char_Count {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		String s="Bibhu Prasad Mishra";
 		
 		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter a character");
+		System.out.println("Enter a character:::");
 		char c=sc.next().charAt(0);
 		
 		int count=0;

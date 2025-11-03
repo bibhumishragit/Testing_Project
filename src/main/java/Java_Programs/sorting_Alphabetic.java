@@ -6,15 +6,14 @@ import java.util.List;
 
 public class sorting_Alphabetic {
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		String str="George";
-		str=str.toLowerCase();
 		String sortString=sortStringAlphabetic(str);
 		System.out.println("Sorted characters:::"+ sortString);
 	}
 	public static String sortStringAlphabetic(String str){
-		char[] charArray=str.toCharArray();
+		char[] charArray=str.toLowerCase().toCharArray();
 		Arrays.sort(charArray);
-		return new String(charArray);
+		//return new String(charArray);
+		return String.valueOf(charArray);
 	}
 }
