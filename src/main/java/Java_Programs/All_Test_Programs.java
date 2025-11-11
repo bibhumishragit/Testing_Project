@@ -18,12 +18,12 @@ import static org.apache.poi.ss.usermodel.CellType.NUMERIC;
 public class All_Test_Programs {
     static String input="This is a wonderful world";
     static String mixedstring="Bibhu12 90Prasad24 Mis234hra 9870";
-    static int number=14;
+    static int number=12345;
     static int[] numberarray={12,12,12,12,13,13,14,15,16,17,18,19,13,14};
     public static void main(String[] args) throws IOException {
         //reverse_words();
         //reverseeachcharandword();
-        //reversenumber();
+        reversenumber();
         //toptwooccurednumbers();
         //conswquitivesum();
         //charcount();
@@ -34,8 +34,8 @@ public class All_Test_Programs {
         //printrightangle();
         //toprightangle();
         //primenumber();
-        mapcheck();
-        find2ndnonrepeatednumber();
+        //mapcheck();
+        //find2ndnonrepeatednumber();
     }
     public static void reverse_words(){
         String[] words=input.split("\\s");
@@ -242,7 +242,7 @@ public class All_Test_Programs {
         for(Map.Entry<Integer,Integer>en:maptest.entrySet()){
              if(en.getValue()==1){
                  k++;
-                 if(k==1){
+                 if(k==2){
                      System.out.println("The 2nd non repeated number is::"+en.getKey());
                  }
              }

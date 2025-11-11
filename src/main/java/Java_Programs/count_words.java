@@ -8,7 +8,7 @@ public class count_words {
 		// TODO Auto-generated method stub
 		String sentence="This is java";
 	
-		String words[]=sentence.split(" ");
+		String[] words=sentence.split(" ");
 		int count=words.length;
 		System.out.println("The count of words::"+count);
 	}
