@@ -20,7 +20,7 @@ public class Test_copy {
 			char c=s1.charAt(i);
 			if(Character.isDigit(c))
 			{
-				num.append(c);
+				num.append(c).append(" ");
 			}
 			/*else if(num.length()>0) {
 				System.out.println(num.toString());

@@ -1,7 +1,6 @@
 package Java_Programs;
 
 import com.google.common.io.Files;
-import com.google.inject.matcher.Matchers;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -10,6 +9,9 @@ import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 import static java.nio.file.Files.readString;
 import static javax.management.openmbean.SimpleType.STRING;
@@ -23,7 +25,7 @@ public class All_Test_Programs {
     public static void main(String[] args) throws IOException {
         //reverse_words();
         //reverseeachcharandword();
-        reversenumber();
+        //reversenumber();
         //toptwooccurednumbers();
         //conswquitivesum();
         //charcount();
@@ -36,6 +38,7 @@ public class All_Test_Programs {
         //primenumber();
         //mapcheck();
         //find2ndnonrepeatednumber();
+        testing_stream();
     }
     public static void reverse_words(){
         String[] words=input.split("\\s");
@@ -247,6 +250,28 @@ public class All_Test_Programs {
                  }
              }
         }
+    }
+
+    public static void testing_stream(){
+        IntStream.range(1,5).boxed().forEach(System.out::print);
+        System.out.println();
+        IntStream.rangeClosed(1,5).boxed().forEach(System.out::print);
+        System.out.println();
+        OptionalInt count= IntStream.range(1, 6).max();
+        System.out.println(count);
+        List<String> names=Arrays.asList("Bibhu","Prasad","Mishra");
+        names.stream().filter(name->name.startsWith("B")).map(String::toUpperCase).forEach(System.out::println);
+        List<Integer>list1=Arrays.asList(1,2,3,4,5,6);
+        int sum=list1.stream().reduce(0,Integer::min);
+        System.out.println(sum);
+
+        // mapToInt example: convert strings to their lengths (int)
+        List<String> list = Arrays.asList("apple", "banana", "cherry");
+        IntStream intStream = list.stream().mapToInt(String::length);
+
+        // mapToObj example: convert IntStream to Stream<String>
+        Stream<String> stringStream = intStream.mapToObj(len -> "Length: " + len);
+        stringStream.forEach(System.out::println);
     }
 }
 
