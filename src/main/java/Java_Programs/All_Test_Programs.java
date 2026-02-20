@@ -38,7 +38,8 @@ public class All_Test_Programs {
         //primenumber();
         //mapcheck();
         //find2ndnonrepeatednumber();
-        testing_stream();
+        //testing_stream();
+        reversedescend();
     }
     public static void reverse_words(){
         String[] words=input.split("\\s");
@@ -272,6 +273,17 @@ public class All_Test_Programs {
         // mapToObj example: convert IntStream to Stream<String>
         Stream<String> stringStream = intStream.mapToObj(len -> "Length: " + len);
         stringStream.forEach(System.out::println);
+    }
+
+    public static void reversedescend(){
+        String str="Bibhu Prasad Mishra".toLowerCase().replaceAll(" ","");
+        char[] strinput=str.toCharArray();
+        Arrays.sort(strinput);
+        StringBuilder result=new StringBuilder();
+        for(int i=strinput.length-1;i>=0;i--){
+            result.append(strinput[i]);
+        }
+        System.out.println(result);
     }
 }
 
