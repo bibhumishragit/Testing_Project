@@ -284,6 +284,9 @@ public class All_Test_Programs {
             result.append(strinput[i]);
         }
         System.out.println(result);
+        List<Integer> numbers=new ArrayList<>(Arrays.asList(1,2,5,1,3,2,4,8,5,6,6,6));
+        List<Integer>num=Arrays.asList(1,2,3,3,4,4,5,6,6,6);
+        numbers.stream().distinct().sorted().forEach(System.out::println);
     }
 }
 
